@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>upgrade = false;
-destroyX = -1;
-destroyY = -1;
+            <string>destroyX = mouse_x;
+destroyY = mouse_y;
+upgrade = false;
+speed = 35;
+
 </string>
           </argument>
         </arguments>
@@ -50,12 +52,12 @@ destroyY = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(point_distance(x,y,destroyX,destroyY) &lt; 10){
-    
-    instance_create(x,y,obj_plant);
+            <string>if (point_distance(x, y, destroyX, destroyY) &lt;= speed)
+{
+    instance_create(x, y, obj_plant);
     instance_destroy();
-
 }
+
 </string>
           </argument>
         </arguments>

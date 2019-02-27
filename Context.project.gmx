@@ -6,28 +6,57 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player_placeholder</sprite>
+    <sprites name="Player">
+      <sprite>sprites\spr_player_up</sprite>
+      <sprite>sprites\spr_player_down</sprite>
+      <sprite>sprites\spr_player_left</sprite>
+      <sprite>sprites\spr_player_right</sprite>
+    </sprites>
     <sprite>sprites\spr_seedBullet</sprite>
     <sprite>sprites\spr_crossair</sprite>
     <sprite>sprites\spr_plant</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_barn</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
-    <background>background\background1</background>
-    <background>background\background2</background>
+    <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Player">
+      <script>scripts\scr_player_initialize.gml</script>
+      <script>scripts\scr_player_input.gml</script>
+      <script>scripts\scr_player_states.gml</script>
+      <script>scripts\scr_player_force_apply.gml</script>
+      <script>scripts\scr_player_force_add.gml</script>
+      <script>scripts\scr_player_move.gml</script>
+      <script>scripts\scr_player_draw.gml</script>
+      <script>scripts\scr_player_shoot.gml</script>
+      <script>scripts\scr_player_animate.gml</script>
+    </scripts>
+    <scripts name="Shadow">
+      <script>scripts\scr_shadow_initialize.gml</script>
+      <script>scripts\scr_shadow_draw.gml</script>
+    </scripts>
+    <scripts name="Camera">
+      <script>scripts\scr_camera_initialize.gml</script>
+      <script>scripts\scr_camera_follow.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_seedBullet</object>
     <object>objects\obj_plant</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_solid</object>
+    <object>objects\obj_shadow</object>
+    <object>objects\obj_camera</object>
+    <object>objects\obj_barn</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_jelle</room>
     <room>rooms\rm_tobias</room>
+    <room>rooms\rm_jelle</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
