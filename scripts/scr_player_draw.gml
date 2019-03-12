@@ -7,9 +7,6 @@ if (mouse_x > x)
 if (mouse_x < x)
     image_xscale = -1;
 
-// Draw the player sprite
-draw_self();
-
 /*
 // Draw the pistol sprite
 var rot = point_direction(x, y, mouse_x, mouse_y);

@@ -8,6 +8,8 @@ switch (state)
         scr_player_move();
         scr_player_force_apply();
         scr_player_shoot();
+        scr_player_extract();
+        scr_player_combine();
         scr_player_animate();
         break;
 }

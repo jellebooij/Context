@@ -1,5 +1,5 @@
 // 
-if (iAttackPressed)
+if (iAttackPressed && !obj_cursor.plantSelected)
 {
     var len = 64;
     var dir = point_direction(x, y, mouse_x, mouse_y);

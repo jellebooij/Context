@@ -9,6 +9,10 @@ velocityY = 0; // The players current Y velocity
 fric = .5; // The players friction (decides in what rate the player will slow down after force appliance)
 isMoving = false;
 animationSpeed = .3;
+plantPartBot = "bot a";
+plantPartMid = "mid a";
+plantPartTop = "top a";
+selectedPart = 0;
 
 // Instantiate the player shadow
 var obj = instance_create(0, 0, obj_shadow);

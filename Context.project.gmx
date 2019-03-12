@@ -12,11 +12,27 @@
       <sprite>sprites\spr_player_left</sprite>
       <sprite>sprites\spr_player_right</sprite>
     </sprites>
+    <sprites name="Plant">
+      <sprites name="Bot">
+        <sprite>sprites\spr_plant_bot_a</sprite>
+        <sprite>sprites\spr_plant_bot_b</sprite>
+      </sprites>
+      <sprites name="Mid">
+        <sprite>sprites\spr_plant_mid_a</sprite>
+        <sprite>sprites\spr_plant_mid_b</sprite>
+      </sprites>
+      <sprites name="Top">
+        <sprite>sprites\spr_plant_top_a</sprite>
+        <sprite>sprites\spr_plant_top_b</sprite>
+      </sprites>
+    </sprites>
     <sprite>sprites\spr_seedBullet</sprite>
     <sprite>sprites\spr_crossair</sprite>
     <sprite>sprites\spr_plant</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_barn</sprite>
+    <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_plant_plot</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -33,6 +49,8 @@
       <script>scripts\scr_player_draw.gml</script>
       <script>scripts\scr_player_shoot.gml</script>
       <script>scripts\scr_player_animate.gml</script>
+      <script>scripts\scr_player_extract.gml</script>
+      <script>scripts\scr_player_combine.gml</script>
     </scripts>
     <scripts name="Shadow">
       <script>scripts\scr_shadow_initialize.gml</script>
@@ -41,6 +59,12 @@
     <scripts name="Camera">
       <script>scripts\scr_camera_initialize.gml</script>
       <script>scripts\scr_camera_follow.gml</script>
+    </scripts>
+    <scripts name="Plant">
+      <script>scripts\scr_plant_initialize.gml</script>
+      <script>scripts\scr_plant_grow.gml</script>
+      <script>scripts\scr_plant_draw.gml</script>
+      <script>scripts\scr_plant_part_getSprite.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -53,6 +77,8 @@
     <object>objects\obj_shadow</object>
     <object>objects\obj_camera</object>
     <object>objects\obj_barn</object>
+    <object>objects\obj_cursor</object>
+    <object>objects\obj_plant_plot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tobias</room>

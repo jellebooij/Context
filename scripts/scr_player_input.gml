@@ -7,4 +7,8 @@ iLeft = keyboard_check(ord("A"));
 iRight = keyboard_check(ord("D"));
 
 iAttackPressed = mouse_check_button_pressed(mb_left);
+iExtractPressed = mouse_check_button_pressed(mb_right);
+
+iWheelUp = mouse_wheel_up();
+iWheelDown = mouse_wheel_down();
 

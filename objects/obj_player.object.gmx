@@ -59,6 +59,22 @@ scr_player_states();
 // Set the depth
 depth = -y;
 
+if (iWheelUp)
+{
+    if (selectedPart &gt;= 1)
+        selectedPart--;
+    else
+        selectedPart = 2;
+}
+
+if (iWheelDown)
+{
+    if (selectedPart &lt;= 1)
+        selectedPart++;
+    else
+        selectedPart = 0;
+}
+
 </string>
           </argument>
         </arguments>

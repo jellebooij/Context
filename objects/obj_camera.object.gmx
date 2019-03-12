@@ -58,6 +58,73 @@ scr_camera_follow();
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var col;
+var colDefault = c_white;
+var colSelected = c_lime;
+
+var selectedPart = obj_player.selectedPart;
+
+var plantPartBot = obj_player.plantPartBot;
+var plantPartMid = obj_player.plantPartMid;
+var plantPartTop = obj_player.plantPartTop;
+
+for (var i = 0; i &lt;= 2; i++)
+    col[i] = (selectedPart == i)
+
+var fontSize = 3;
+
+/*
+draw_set_color(col1);
+draw_text_transformed(mouse_x + 64, mouse_y, "Top part: " + plantPartTop, fontSize, fontSize, 0);
+
+draw_set_color(col2);
+draw_text_transformed(mouse_x + 64, mouse_y + 48, "Mid part: " + plantPartMid, fontSize, fontSize, 0);
+
+draw_set_color(col3);
+draw_text_transformed(mouse_x + 64, mouse_y + 96, "Bot part: " + plantPartBot, fontSize, fontSize, 0);
+*/
+
+// 
+var size = .5;
+var posX = 128;
+var posY = 1000;
+
+d3d_set_fog(col[2], c_white, 0, 0);
+draw_sprite_ext(scr_plant_part_getSprite(plantPartBot), 0, posX, posY, size, size, 0, c_white, 1);
+d3d_set_fog(false, c_white, 0, 0);
+
+d3d_set_fog(col[1], c_white, 0, 0);
+draw_sprite_ext(scr_plant_part_getSprite(plantPartMid), 0, posX, posY, size, size, 0, c_white, 1);
+d3d_set_fog(false, c_white, 0, 0);
+
+d3d_set_fog(col[0], c_white, 0, 0);
+draw_sprite_ext(scr_plant_part_getSprite(plantPartTop), 0, posX, posY, size, size, 0, c_white, 1);
+d3d_set_fog(false, c_white, 0, 0);
+
+//draw_set_color(c_white);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
