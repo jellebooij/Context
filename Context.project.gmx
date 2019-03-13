@@ -33,6 +33,7 @@
     <sprite>sprites\spr_barn</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_plant_plot</sprite>
+    <sprite>sprites\spr_ammo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -65,6 +66,8 @@
       <script>scripts\scr_plant_grow.gml</script>
       <script>scripts\scr_plant_draw.gml</script>
       <script>scripts\scr_plant_part_getSprite.gml</script>
+      <script>scripts\scr_plant_functions.gml</script>
+      <script>scripts\scr_plant_produce.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -79,6 +82,7 @@
     <object>objects\obj_barn</object>
     <object>objects\obj_cursor</object>
     <object>objects\obj_plant_plot</object>
+    <object>objects\obj_ammo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tobias</room>

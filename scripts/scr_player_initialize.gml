@@ -13,6 +13,8 @@ plantPartBot = "bot a";
 plantPartMid = "mid a";
 plantPartTop = "top a";
 selectedPart = 0;
+ammo = 0;
+plantCost = 5;
 
 // Instantiate the player shadow
 var obj = instance_create(0, 0, obj_shadow);

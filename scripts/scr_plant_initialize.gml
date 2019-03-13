@@ -1,7 +1,7 @@
 // Initialize the plant
 
 // Define the plant variables
-growthRate = .05;
+growthRate = .005;
 partBot = choose("bot a", "bot b");
 partMid = choose("mid a", "mid b");
 partTop = choose("top a", "top b");

@@ -120,6 +120,11 @@ d3d_set_fog(false, c_white, 0, 0);
 
 //draw_set_color(c_white);
 
+var size = 2.5;
+var posX = 200;
+var posY = 950;
+draw_text_transformed(posX, posY, "Charge: " + string(obj_player.ammo), size, size, 0);
+
 </string>
           </argument>
         </arguments>
