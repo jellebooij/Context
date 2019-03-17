@@ -26,14 +26,17 @@
         <sprite>sprites\spr_plant_top_b</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_seedBullet</sprite>
     <sprite>sprites\spr_crossair</sprite>
     <sprite>sprites\spr_plant</sprite>
-    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_barn</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_plant_plot</sprite>
     <sprite>sprites\spr_ammo</sprite>
+    <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_spawner</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -68,6 +71,7 @@
       <script>scripts\scr_plant_part_getSprite.gml</script>
       <script>scripts\scr_plant_functions.gml</script>
       <script>scripts\scr_plant_produce.gml</script>
+      <script>scripts\scr_plant_shoot.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -83,6 +87,9 @@
     <object>objects\obj_cursor</object>
     <object>objects\obj_plant_plot</object>
     <object>objects\obj_ammo</object>
+    <object>objects\obj_tree</object>
+    <object>objects\obj_grass</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tobias</room>

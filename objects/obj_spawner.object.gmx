@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnRate = 60;
+            <string>spawnRate = 3000;
 alarm[0] = spawnRate;
+
 </string>
           </argument>
         </arguments>
@@ -49,13 +50,22 @@ alarm[0] = spawnRate;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(spawnRate &gt; 10){
+            <string>if (spawnRate &gt; 10) {
     spawnRate -= 1;
 }
 
-instance_create(random_range(0,view_wview),random_range(0,view_hview),obj_enemy);
+var len = room_width / 2;
+var dir = random_range(0, 360);
+
+var lenX = lengthdir_x(len, dir);
+var lenY = lengthdir_y(len, dir);
+
+var posX = room_width / 2;
+var posY = room_height / 2;
+instance_create(posX + lenX, posY + lenY, obj_enemy);
 
 alarm[0] = spawnRate;
+
 </string>
           </argument>
         </arguments>

@@ -25,12 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>destroyX = mouse_x;
-destroyY = mouse_y;
-plantPartBot = obj_player.plantPartBot;
-plantPartMid = obj_player.plantPartMid;
-plantPartTop = obj_player.plantPartTop;
-speed = 35;
+            <string>target = noone;
+speed = 12;
 
 </string>
           </argument>
@@ -54,37 +50,40 @@ speed = 35;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (point_distance(x, y, destroyX, destroyY) &lt;= speed)
-{
-    var obj = instance_create(x, y, obj_plant);
-    obj.partBot = plantPartBot;
-    obj.partMid = plantPartMid;
-    obj.partTop = plantPartTop;
-    obj.isDead = false;
-    instance_destroy();
-}
+            <string>if (instance_exists(target))
+    direction = point_direction(x, y, target.x, target.y);
 
 image_angle = direction;
+depth = -y - 268;
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="0">
+    <event eventtype="4" ename="obj_enemy">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>other.hp -= 2;
+instance_destroy();
+
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
