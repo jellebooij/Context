@@ -6,6 +6,7 @@ var axisY = (iDown - iUp);
 
 var dir = point_direction(0, 0, axisX, axisY);
 
+
 isMoving = (axisX != 0 or axisY != 0);
 
 // Add force to the player

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnRate = 3000;
+            <string>spawnRate = 300;
 alarm[0] = spawnRate;
 
 </string>
@@ -54,7 +54,9 @@ alarm[0] = spawnRate;
     spawnRate -= 1;
 }
 
-var len = room_width / 2;
+
+
+var len = sqrt((room_width * 0.5) * (room_width * 0.5) + (room_width * 0.5) * (room_width * 0.5)) + 100
 var dir = random_range(0, 360);
 
 var lenX = lengthdir_x(len, dir);
