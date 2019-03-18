@@ -25,8 +25,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnRate = 300;
+            <string>spawnRate = 30 * room_speed;
+directionRateMin = 10 * room_speed;
+directionRateMax = 60 * room_speed;
+targetX = 0;
+targetY = 0;
+dir = random_range(0, 360);
 alarm[0] = spawnRate;
+alarm[1] = random_range(directionRateMin, directionRateMax);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>dir = random_range(0, 360);
+alarm[1] = random_range(directionRateMin, directionRateMax);
 
 </string>
           </argument>
@@ -50,21 +81,21 @@ alarm[0] = spawnRate;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spawnRate &gt; 10) {
+            <string>if (spawnRate &gt; 10)
     spawnRate -= 1;
-}
 
-
-
-var len = sqrt((room_width * 0.5) * (room_width * 0.5) + (room_width * 0.5) * (room_width * 0.5)) + 100
-var dir = random_range(0, 360);
+var len = sqrt((room_width * 0.5) * (room_width * 0.5) + (room_width * 0.5) * (room_width * 0.5)) + 100;
 
 var lenX = lengthdir_x(len, dir);
 var lenY = lengthdir_y(len, dir);
 
 var posX = room_width / 2;
 var posY = room_height / 2;
-instance_create(posX + lenX, posY + lenY, obj_enemy);
+
+targetX = posX + lenX;
+targetY = posY + lenY;
+
+instance_create(targetX, targetY, obj_enemy);
 
 alarm[0] = spawnRate;
 

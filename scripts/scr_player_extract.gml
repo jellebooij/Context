@@ -5,6 +5,8 @@ if (iExtractPressed && obj_cursor.plantSelected)
     plantPartMid = obj_cursor.plantPartMid;
     plantPartTop = obj_cursor.plantPartTop;
     
+    ammo += plantGain;
+    
     with (obj_cursor.plantObject.shadow) instance_destroy();
     with (obj_cursor.plantObject) instance_destroy();
 }

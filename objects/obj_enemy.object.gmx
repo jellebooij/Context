@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>hp = 10;
 
+shadow = instance_create(0, 0, obj_shadow);
+shadow.target = self.id;
+shadow.offsetY = -8;
+
 </string>
           </argument>
         </arguments>
@@ -53,13 +57,13 @@
 depth = -y;
 
 if (hp &lt;= 0)
+{
+    with (shadow) instance_destroy();
     instance_destroy();
-    
-if(distance_to_object(obj_tree) &lt; 50){
-
-obj_tree.health -= 0.1;
-
 }
+    
+if (distance_to_object(obj_tree) &lt; 50)
+    obj_tree.hp -= 0.1;
 
 </string>
           </argument>

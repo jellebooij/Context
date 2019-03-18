@@ -1,7 +1,7 @@
 // Follow the player
 
 // Lerp towards the player
-var offsetY = -(sprite_get_height(spr_player_left) / 2);
+var offsetY = -(sprite_get_height(spr_player_idle_left) / 2);
 
 var dist = distance_to_point(obj_player.x, obj_player.y + offsetY);
 var spd = dist * lerpRate;

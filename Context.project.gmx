@@ -9,8 +9,15 @@
     <sprites name="Player">
       <sprite>sprites\spr_player_up</sprite>
       <sprite>sprites\spr_player_down</sprite>
-      <sprite>sprites\spr_player_left</sprite>
-      <sprite>sprites\spr_player_right</sprite>
+      <sprite>sprites\spr_player_idle_left</sprite>
+      <sprite>sprites\spr_player_idle_right</sprite>
+      <sprite>sprites\spr_player_run_left</sprite>
+      <sprite>sprites\spr_player_run_right</sprite>
+      <sprite>sprites\spr_player_shoot_left</sprite>
+      <sprite>sprites\spr_player_shoot_right</sprite>
+      <sprite>sprites\spr_player_mask</sprite>
+      <sprite>sprites\spr_gun_idle_right</sprite>
+      <sprite>sprites\spr_gun_idle_left</sprite>
     </sprites>
     <sprites name="Plant">
       <sprites name="Bot">
@@ -37,6 +44,8 @@
     <sprite>sprites\spr_tree</sprite>
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_spawner</sprite>
+    <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_pitchfork</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -90,6 +99,7 @@
     <object>objects\obj_tree</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_pitchfork</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_tobias</room>

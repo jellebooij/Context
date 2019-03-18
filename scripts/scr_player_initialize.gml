@@ -15,6 +15,9 @@ plantPartTop = "top a";
 selectedPart = 0;
 ammo = 5;
 plantCost = 5;
+plantGain = 2;
+movementDirection = 0;
+image_speed = 1;
 
 // Instantiate the player shadow
 var obj = instance_create(0, 0, obj_shadow);

@@ -10,5 +10,7 @@ if (iAttackPressed && !obj_cursor.plantSelected && ammo >= plantCost)
     obj.direction = dir;
     
     ammo -= plantCost;
+    
+    image_index = 0;
 }
 
