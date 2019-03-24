@@ -15,7 +15,7 @@ plantPartTop = "top a";
 selectedPart = 0;
 ammo = 5;
 plantCost = 5;
-plantGain = 2;
+plantGain = 5;
 movementDirection = 0;
 image_speed = 1;
 

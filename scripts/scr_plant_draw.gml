@@ -3,6 +3,9 @@
 // Define the temporary variables
 var bot, mid, top;
 
+// Set the plants image index
+image_index = isDead;
+
 // Draw the 3 plant parts
 for (var i = 3; i > 0; i--)
 {
