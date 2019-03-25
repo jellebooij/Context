@@ -93,6 +93,7 @@
     <object>objects\obj_seedBullet</object>
     <object>objects\obj_plant</object>
     <object>objects\obj_spawner</object>
+    <object>objects\obj_treeSpawner</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_solid</object>
     <object>objects\obj_shadow</object>
