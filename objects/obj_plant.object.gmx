@@ -30,6 +30,7 @@ scr_plant_initialize();
 
 instance_create(x, y, obj_plant_plot);
 
+
 </string>
           </argument>
         </arguments>
@@ -105,6 +106,7 @@ if (isDead)
     image_alpha = .5;
     image_xscale = .65;
     image_yscale = .65;
+    
 }
 else
 {

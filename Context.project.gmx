@@ -6,6 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="Menu">
+      <sprite>sprites\spr_Play</sprite>
+      <sprite>sprites\spr_Quit</sprite>
+      <sprite>sprites\spr_TryAgain</sprite>
+    </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player_up</sprite>
       <sprite>sprites\spr_player_down</sprite>
@@ -100,10 +105,18 @@
     <object>objects\obj_grass</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_pitchfork</object>
+    <objects name="Menu">
+      <object>objects\obj_Play</object>
+      <object>objects\obj_Quit</object>
+    </objects>
+    <object>objects\obj_score</object>
+    <object>objects\obj_TryAgain</object>
+    <object>objects\obj_gameover</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Menu</room>
     <room>rooms\rm_tobias</room>
-    <room>rooms\rm_jelle</room>
+    <room>rooms\GameOver</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

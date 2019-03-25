@@ -1,3 +1,5 @@
+image_speed = 1.5;
+
 // Animate the player
 if (isMoving)
 {
