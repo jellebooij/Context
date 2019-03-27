@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_anans_projectile</sprite>
     <sprites name="Menu">
       <sprite>sprites\spr_Play</sprite>
       <sprite>sprites\spr_Quit</sprite>
@@ -28,14 +29,23 @@
       <sprites name="Bot">
         <sprite>sprites\spr_plant_bot_a</sprite>
         <sprite>sprites\spr_plant_bot_b</sprite>
+        <sprite>sprites\spr_plant_bot_c</sprite>
+        <sprite>sprites\spr_plant_bot_d</sprite>
+        <sprite>sprites\spr_plant_bot_f</sprite>
       </sprites>
       <sprites name="Mid">
         <sprite>sprites\spr_plant_mid_a</sprite>
         <sprite>sprites\spr_plant_mid_b</sprite>
+        <sprite>sprites\spr_plant_mid_c</sprite>
+        <sprite>sprites\spr_plant_mid_d</sprite>
+        <sprite>sprites\spr_plant_mid_f</sprite>
       </sprites>
       <sprites name="Top">
         <sprite>sprites\spr_plant_top_a</sprite>
         <sprite>sprites\spr_plant_top_b</sprite>
+        <sprite>sprites\spr_plant_top_c</sprite>
+        <sprite>sprites\spr_plant_top_d</sprite>
+        <sprite>sprites\spr_plant_top_f</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_enemy</sprite>
@@ -51,6 +61,10 @@
     <sprite>sprites\spr_spawner</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_pitchfork</sprite>
+    <sprite>sprites\spr_grape_bullet</sprite>
+    <sprite>sprites\spr_mais</sprite>
+    <sprite>sprites\spr_maaisenemy_arms</sprite>
+    <sprite>sprites\spr_maaisenemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -95,6 +109,7 @@
     <object>objects\obj_spawner</object>
     <object>objects\obj_treeSpawner</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_maaisenenmy</object>
     <object>objects\obj_solid</object>
     <object>objects\obj_shadow</object>
     <object>objects\obj_camera</object>
@@ -105,6 +120,9 @@
     <object>objects\obj_tree</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_grape_bullet</object>
+    <object>objects\obj_mais_bullet</object>
+    <object>objects\obj_pineappleBullet</object>
     <object>objects\obj_pitchfork</object>
     <objects name="Menu">
       <object>objects\obj_Play</object>

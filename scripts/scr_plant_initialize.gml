@@ -2,9 +2,9 @@
 
 // Define the plant variables
 growthRate = .005;
-partBot = choose("bot a", "bot b");
-partMid = choose("mid a", "mid b");
-partTop = choose("top a", "top b");
+partBot = choose("bot a", "bot b", "bot c", "bot d", "bot f");
+partMid = choose("mid a", "mid b", "mid c", "mid d", "mid f");
+partTop = choose("top a", "top b", "top c", "top d", "top f");
 isDead = true;
 image_xscale = .1;
 image_yscale = image_xscale;

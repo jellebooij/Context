@@ -95,7 +95,7 @@ var posY = room_height / 2;
 targetX = posX + lenX;
 targetY = posY + lenY;
 
-instance_create(targetX, targetY, obj_enemy);
+instance_create(targetX, targetY, obj_maaisenenmy);
 
 alarm[0] = spawnRate;
 
