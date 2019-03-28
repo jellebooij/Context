@@ -28,6 +28,20 @@
             <string>// Initialize the player
 scr_player_initialize();
 
+// Play ambient
+audio_play_sound(snd_wind, 0, true);
+ambientZombie = audio_play_sound(snd_zombie, 0, true);
+
+// Play music
+musicIdle = audio_play_sound(snd_music_idle, 0, true);
+musicCombat = audio_play_sound(snd_music_combat, 0, true);
+
+musicIdleVolume = 1;
+musicCombatVolume = 0;
+
+fadeSpeed = .05;
+fadeDistance = 1250;
+
 </string>
           </argument>
         </arguments>
@@ -75,6 +89,94 @@ if (iWheelDown)
         selectedPart = 0;
 }
 
+// Set the music volumes
+audio_sound_gain(musicIdle, musicIdleVolume, 0);
+audio_sound_gain(musicCombat, musicCombatVolume, 0);
+audio_sound_gain(ambientZombie, musicCombatVolume * 2, 0);
+
+if (instance_exists(obj_enemy))
+{
+    var target = instance_nearest(x, y, obj_enemy);
+    var dist = distance_to_point(target.x, target.y);
+    
+    inCombat = (dist &lt;= fadeDistance)
+}
+else
+    inCombat = false;
+
+if (inCombat)
+{
+    if (musicIdleVolume &gt;= fadeSpeed)
+        musicIdleVolume -= fadeSpeed;
+    else
+        musicIdleVolume = 0;
+    
+    if (musicCombatVolume &lt;= .5 - fadeSpeed)
+        musicCombatVolume += fadeSpeed;
+    else
+        musicCombatVolume = .5;
+    
+    if (!hurdyAlarmPlayed)
+    {
+        audio_play_sound(snd_hurdyAlarm, 0, false);
+        hurdyAlarmPlayed = true;
+    }
+}
+else
+{
+    if (musicIdleVolume &lt;= .5 - fadeSpeed)
+        musicIdleVolume += fadeSpeed;
+    else
+        musicIdleVolume = .5;
+    
+    if (musicCombatVolume &gt;= fadeSpeed)
+        musicCombatVolume -= fadeSpeed;
+    else
+        musicCombatVolume = 0;
+    
+    hurdyAlarmPlayed = false;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (shoot)
+{
+    var offsetX = 0;
+    var offsetY = -227;
+    var len = 64;
+    var dir = point_direction(x + offsetX, y + offsetY, mouse_x, mouse_y);
+    var lenX = lengthdir_x(len, dir);
+    var lenY = lengthdir_y(len, dir);
+    
+    var obj = instance_create(x + lenX + offsetX, y + lenY + offsetY , obj_seedBullet);
+    obj.direction = dir;
+    
+    var snd = audio_play_sound(snd_shoot, 0, false);
+    audio_sound_pitch(snd, random_range(.75, 1.3));
+    
+    shoot = false;
+}
+
 </string>
           </argument>
         </arguments>
@@ -103,9 +205,43 @@ draw_sprite_ext(spr_arrow, 0, x, y, 1, 1, rot, c_white, 1);
 draw_self();
 
 if (movementDirection &gt;= 90 &amp;&amp; movementDirection &lt; 270)
-    draw_sprite(spr_gun_idle_left, image_index, x, y);
+{
+    if (shoot)   
+        draw_sprite(spr_gun_shoot_left, image_index, x, y);
+    else
+        draw_sprite(spr_gun_idle_left, image_index, x, y);
+}
 else
-    draw_sprite(spr_gun_idle_right, image_index, x, y);
+{
+    if (shoot)
+        draw_sprite(spr_gun_shoot_right, image_index, x, y);
+    else
+        draw_sprite(spr_gun_idle_right, image_index, x, y);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ammo += 5;
 
 </string>
           </argument>

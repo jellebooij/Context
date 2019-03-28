@@ -17,6 +17,9 @@ ammo = 5;
 plantCost = 5;
 plantGain = 5;
 movementDirection = 0;
+shoot = 0;
+inCombat = false;
+hurdyAlarmPlayed = false;
 image_speed = 1;
 
 // Instantiate the player shadow

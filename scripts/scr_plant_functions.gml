@@ -5,21 +5,19 @@ switch (partTop)
         break;
     
     case "top b":
-        scr_plant_shoot(90, 750,0);
+        scr_plant_shoot(75, 750, 0);
         break;
         
     case "top c":
-        scr_plant_shoot(90, 2000,1);
+        scr_plant_shoot(135, 2000, 1);
         break;
         
     case "top d":
-        scr_plant_shoot(20, 750,1);
+        scr_plant_shoot(20, 750, 3);
         break;
         
     case "top f":
-        scr_plant_shoot(20, 2000,2);
+        scr_plant_shoot(110, 1000, 2);
         break;
-        
-    
 }
 

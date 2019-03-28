@@ -21,12 +21,12 @@ if (target != noone)
             
         if(bulletType == 1)
             obj = instance_create(x, y + offsetY, obj_grape_bullet);
-            
-            
+        
         if(bulletType == 2)
             obj = instance_create(x, y + offsetY, obj_pineappleBullet);
-            
-            
+                    
+        if(bulletType == 3)
+            obj = instance_create(x, y + offsetY, obj_mais_bullet);
             
         obj.target = target;
         obj.depth = depth - 1;

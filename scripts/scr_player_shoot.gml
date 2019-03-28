@@ -1,16 +1,9 @@
 // 
-if (iAttackPressed && !obj_cursor.plantSelected && ammo >= plantCost)
-{
-    var len = 64;
-    var dir = point_direction(x, y, mouse_x, mouse_y);
-    var lenX = lengthdir_x(len, dir);
-    var lenY = lengthdir_y(len, dir);
-
-    var obj = instance_create(x + lenX, y + lenY, obj_seedBullet);
-    obj.direction = dir;
-    
+if (iAttackPressed && !obj_cursor.plantSelected && ammo >= plantCost && !shoot && !obj_cursor.obstructed)
+{    
     ammo -= plantCost;
     
     image_index = 0;
+    shoot = true;
 }
 

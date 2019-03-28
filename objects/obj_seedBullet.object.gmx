@@ -61,6 +61,10 @@ speed = 35;
     obj.partMid = plantPartMid;
     obj.partTop = plantPartTop;
     obj.isDead = false;
+    
+    var snd = audio_play_sound(snd_grow, 0, false);
+    audio_sound_pitch(snd, random_range(.5, 2));
+    
     instance_destroy();
 }
 
